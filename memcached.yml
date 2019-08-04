@@ -1,0 +1,7 @@
+---
+# Install Memcached Server.
+- hosts: memcached
+  become: true
+  roles:
+    - memcached_server
+

@@ -1,0 +1,20 @@
+---
+- name: Install EPEL.
+  yum:
+    name:
+      - epel-release
+    state: present
+- name: Install Memcached.
+  yum:
+    name:
+      - memcached 
+    state: present
+- name: Start Memcached.
+  service:
+    name: memcached
+    state: started
+- name: Enable Memcached.
+  service:
+    name: memcached
+    enabled: yes
+
